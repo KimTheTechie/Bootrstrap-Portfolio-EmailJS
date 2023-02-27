@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+</style>:root {
+    --MainColor: #ECF2FF;
+    --C1: #ECF9FF;
+    --C2: #D9ACF5;
+    --C3: #FFCEFE;
+    --C4: #93C6EF;
+    --C5: #FEDEFF;
+    --C6: #E5E0FF;
+}
+
+.body {
+    height: 100vh;
+    background: var(Maincolor);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.headerTitle {
+    text-align: center;
+}
+
+.Banner {
+    height: 40vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse at left, var(--C1), var(--C2), var(--C3), transparent), radial-gradient(ellipse, var(--C4), var(--C5), var(--C6), transparent);
+    border-radius: 40px;
+    background-size: 400% 400%;
+    box-shadow: 0 5px 80px var(--C3);
+    -webkit-animation: AnimatedBG 12s ease-in-out infinite;
+}
+
+.NavUL {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav-item:hover::after {
+    /* Ein leeres Pseudo-Element nach dem Anker hinzufügen */
+    content: "";
+    /*color: red !important; */
+    height: 2px;
+    background-color: blue;
+    -webkit-animation: anchorUnderline 1s forwards;
+    /* Positioniert das Pseudo Element relativ zum Element */
+    position: absolute;
+    width: 100%;
+    left: 0;
+    /* legt den Abstand zwischen dem unteren Ende des Ankers und der Unterstreichung fest */
+    bottom: 1vh;
+}
+
+@-webkit-keyframes anchorUnderline {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes AnimatedBG {
+    0% {
+        background-position: 50% 100%;
+    }
+
+    50% {
+        background-position: 100% 150%;
+    }
+
+    100% {
+        background-position: 50% 100%;
+    }
+}
+
+/* Todo List Style */
+.myUL {
+    max-height: 10vh;
+    overflow: auto;
+}
+
+.noDot {
+    list-style-type: none;
+    list-style: none;
+    font-size: 1.4em;
+}
+
+/* Contact Form Style */
+.contact-form {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50%;
+    text-align: center;
+    /*Kinder von contact-form*/
+    text-align: center;
+    box-shadow: 0 0 80px;
+    color: rgba(0, 0, 0, 0.293);
+    border-radius: 20px;git
+}
